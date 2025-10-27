@@ -3,8 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <title>Oumaima & Simon</title>
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"
+      defer
+    ></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(
+          ScrollTrigger,
+          ScrollSmoother,
+          SplitText,
+          TextPlugin
+        );
+      });
+    </script>
+    <script src="scripts/main.js" defer></script>
   </head>
   <body>
     <header>
@@ -12,12 +50,30 @@
         <a class="logo" href="#hero">Oumaima & Simon</a>
 
         <div class="links">
-          <a href="#info">INFORMATION</a>
-          <a href="#schema">SCHEMA</a>
-          <a href="#plats">PLATS</a>
+          <a href="#plats">plats</a>
+          <a href="#toastmasters">toastmasters</a>
+          <a href="#dresscode">klädkod</a>
           <a class="rsvpButton" href="#rsvp">RSVP</a>
         </div>
       </nav>
     </header>
+    <main>
+      <section id="hero">
+        <h1>
+          Oumaima
+          <div class="ampersand">&</div>
+          Simon
+        </h1>
+        <div class="dateAndButton">
+          <p class="date">11 Juli 2026</p>
+          <a href="#rsvp" class="rsvpButton">RSVP</a>
+        </div>
+      </section>
+      <section id="welcome"></section>
+      <section id="gallery"></section>
+      <section id="toastmasters"></section>
+      <section id="dresscode"></section>
+      <section id="location"></section>
+    </main>
   </body>
 </html>

@@ -1,0 +1,86 @@
+:root {
+  --color-bg: #f2f2f0;
+
+  --color-primary-300: #97a697;
+  --color-primary-500: #698c72;
+  --color-primary-900: #3b4036;
+
+  --color-accent-500: #bf8641;
+
+  --font-display: "Libre Caslon Display", serif;
+  --font-body: "Libre Caslon Text", serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  color: var(--color-primary-900);
+
+  /* Draw a horizontal line every 100vh as a repeating background gradient */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 99vh,
+    #e0e0dc 99vh,
+    #e0e0dc 100vh
+  );
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    .links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7rem;
+  line-height: 1;
+  text-align: center;
+  color: var(--color-primary-900);
+
+  .ampersand {
+    font-size: 2rem;
+    position: relative;
+    top: 0.25em;
+  }
+}
+
+.rsvpButton {
+  background-color: var(--color-primary-500);
+  color: var(--color-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.dateAndButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
